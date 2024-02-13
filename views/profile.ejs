@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang=“en”>
+  <head>
+    <meta charset=“UTF-8" />
+    <meta name=“viewport” content=“width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <p>Profile</p>
+
+  <% for(let i = 0; i < coop.length; i++) { %>
+  <div class="coop">
+    <h3><%= coop[i].company %></h3>
+    <p><%= coop[i].location %></p>
+    <p><%= coop[i].date_applied %></p>
+    <p><%= coop[i].app_status %></p>
+  </div>
+  <% } %>
+  </body>
+</html>
