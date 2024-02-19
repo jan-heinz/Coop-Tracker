@@ -13,6 +13,7 @@ class PageController {
 
         const coop1 = {
             company: "NUSci",
+            job_title: "Programmer",
             location: "Boston",
             date_applied: "1/24/2024",
             app_status: "Accepted",
@@ -20,6 +21,7 @@ class PageController {
 
         const coop2 = {
             company: "Oasis",
+            job_title: "Programmer",
             location: "Boston",
             date_applied: "1/15/2024",
             app_status: "Declined",
@@ -27,6 +29,7 @@ class PageController {
 
         const coop3 = {
             company: "Amazon",
+            job_title: "Programmer",
             location: "Seattle",
             date_applied: "1/10/2024",
             app_status: "Ghosted",
