@@ -11,7 +11,7 @@ class PageController {
     }
 
     static async getProfile(req, res) {
-        const coops = await CoopAccessor.getAllCoops{};
+        const coops = await CoopAccessor.getAllCoops();
         res.render("profile", { coops });
     }
 
