@@ -1,19 +1,21 @@
-import Connection from "../db/connection.js"
-import mongoose from "mongoose";
-import Article from "..model/coop.js";
-import Coop from "../models/coop";
+import Connection from "../db/connections.js"
+import Coop from "../models/coop.js";
 
 export default class CoopAccessor {
     static async getCoopById(coopId) {
-        await Connection.open("coop");
+        await Connection.open("coops");
         const coopFromDatabase = await Coop.findOne({id: coopId});
         return coopFromDatabase;
     }
 
     static async getAllCoops() {
-        await Connection.open("coop");
+        await Connection.open("coops");
         const allCoops = await Coop.find({});
         return allCoops;
+    }
+
+    static async postCoop(coopDoc) {
+        Coop.create(coopDoc);
     }
 }
 

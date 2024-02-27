@@ -15,8 +15,18 @@ class PageController {
         res.render("profile", { coops });
     }
 
-    static getAdd(req, res) {
-        res.sendFile(path.resolve() + "/public/html/add.html");
+    static async postCoop(req, res) {
+        const coopToPost = {
+            id: req.body.id,
+            company: req.body.company,
+            job_title: req.body.job_title,
+            location: req.body.location,
+            date_applied: req.body.date_applied,
+            app_status: req.body.app_status,
+        };
+        CoopAccessor.postCoop(coopToPost);
+
+        res.redirect("/coops");
     }
 
     static getFriends(req, res) {
