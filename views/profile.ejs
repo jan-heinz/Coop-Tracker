@@ -7,7 +7,31 @@
   </head>
 
   <body>
-    <p>Profile</p>
+    <h1>Profile</h1>
+    <h2>New Coop</h2>
+    <form method="POST">
+      <label for="id">ID</label>
+      <input type="text" name="id" id="id" />
+      <br />
+      <label for="company">Company</label>
+      <input type="text" name="company" id="company" />
+      <br />
+      <label for="job_title">Job Title</label>
+      <input type="text" name="job_title" id="job_title" />
+      <br />
+      <label for="location">Location</label>
+      <input type="text" name="location" id="location" />
+      <br />
+      <label for="date_applied">Date Applied</label>
+      <input type="text" name="date_applied" id="date_applied" />
+      <br />
+      <label for="app_status">Application Status</label>
+      <input type="text" name="app_status" id="app_status" />
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <hr />
 
   <% for(let i = 0; i < coops.length; i++) { %>
   <div class="coops">
